@@ -1,0 +1,32 @@
+@startuml Diagramm1
+
+
+class ProgrammStarten{
+    constructor()
+}
+class HTMLElement{
+    onclick: functionRef( MouseEvent)
+}
+class ZahlEingeben{
+    key1Pressed()
+}
+class ZahlLoeschen{
+    keyCPressed()
+}
+class CalculatorContext{
+    getDisplayValue()
+    setDisplayValue()
+}
+class GuiAdapter{
+    displayValue: HTMLElement
+    key1: HTMLElement
+    keyC: HTMLElement
+}
+
+HTMLElement --> ZahlEingeben
+HTMLElement --> ZahlLoeschen
+ZahlEingeben --> CalculatorContext
+ZahlLoeschen --> CalculatorContext
+CalculatorContext --> GuiAdapter
+
+@enduml

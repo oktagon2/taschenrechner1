@@ -1,0 +1,13 @@
+@startuml
+
+participant "Key1 :HTMLElement" as Key1
+participant ":ZahlEingeben" as ZahlEingeben
+participant ":CalculatorContext" as CalculatorContext
+participant "Display :HTMLElement" as Display
+
+Key1 -> ZahlEingeben: key1Pressed()
+ZahlEingeben -> CalculatorContext: getDisplayValue()
+ZahlEingeben -> CalculatorContext: setDisplayValue()
+CalculatorContext -> Display: set innerText()
+
+@enduml
